@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://csygogo.github.io">
   <title>字符串相关问题 | csygogo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="以””方式创造字符串，字符串内容相同，则JVM只会创建一个String对象，并在字符串常量池（处在堆内存中）中进行维护  通过构造方法创建的字符串对象是在堆内存中进行存储">
+  <meta name="description" content="值得注意的点 以””方式创造字符串，字符串内容相同，则JVM只会创建一个String对象，并在字符串常量池（处在堆内存中）中进行维护 通过构造方法创建的字符串对象是在堆内存中进行存储 字符串使用加号串联时,系统会自动创建stringbuilder对象，并利用其append方法拼接，并使用tostring方法转化为string对象 使用&#x3D;&#x3D;号进行比较时，对于基本类型比较的是数据值是否相同，对于引用类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字符串相关问题">
 <meta property="og:url" content="https://csygogo.github.io/2020/10/21/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="csygogo的博客">
-<meta property="og:description" content="以””方式创造字符串，字符串内容相同，则JVM只会创建一个String对象，并在字符串常量池（处在堆内存中）中进行维护  通过构造方法创建的字符串对象是在堆内存中进行存储">
+<meta property="og:description" content="值得注意的点 以””方式创造字符串，字符串内容相同，则JVM只会创建一个String对象，并在字符串常量池（处在堆内存中）中进行维护 通过构造方法创建的字符串对象是在堆内存中进行存储 字符串使用加号串联时,系统会自动创建stringbuilder对象，并利用其append方法拼接，并使用tostring方法转化为string对象 使用&#x3D;&#x3D;号进行比较时，对于基本类型比较的是数据值是否相同，对于引用类">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-21T13:03:52.000Z">
-<meta property="article:modified_time" content="2020-10-21T14:00:08.270Z">
+<meta property="article:modified_time" content="2020-10-28T14:18:59.490Z">
 <meta property="article:author" content="CSY">
 <meta property="article:tag" content="编程,java,机器学习">
 <meta name="twitter:card" content="summary">
@@ -163,11 +163,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li><p>以””方式创造字符串，字符串内容相同，则JVM只会创建一个String对象，并在<em>字符串常量池</em>（处在堆内存中）中进行维护</p>
-</li>
-<li><p>通过构造方法创建的字符串对象是在<em>堆内存</em>中进行存储</p>
-</li>
+        <h2 id="值得注意的点"><a href="#值得注意的点" class="headerlink" title="值得注意的点"></a>值得注意的点</h2><ol>
+<li>以””方式创造字符串，字符串内容相同，则JVM只会创建一个String对象，并在<em>字符串常量池</em>（处在堆内存中）中进行维护</li>
+<li>通过构造方法创建的字符串对象是在<em>堆内存</em>中进行存储</li>
+<li>字符串使用加号串联时,系统会自动创建stringbuilder对象，并利用其append方法拼接，并使用tostring方法转化为string对象</li>
+<li>使用==号进行比较时，对于基本类型比较的是数据值是否相同，对于引用类型是比较地址值是否相同。字符串是对象，想要比较内容可以使用equals方法</li>
+<li>带括号的表示是方法，不带括号表示属性</li>
+</ol>
+<h2 id="Stringbuilder"><a href="#Stringbuilder" class="headerlink" title="Stringbuilder"></a>Stringbuilder</h2><ol>
+<li>是一个可变的字符串类，可以看作一个容器</li>
+<li>可以字符串提高操作效率<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3>创建一个空白的可变字符串对象，无任何内容；创建一个根据传入参数创建对象<h3 id="成员方法"><a href="#成员方法" class="headerlink" title="成员方法"></a>成员方法</h3>append,tostring,reverse…<h3 id="String和Stringbuilder的转换"><a href="#String和Stringbuilder的转换" class="headerlink" title="String和Stringbuilder的转换"></a>String和Stringbuilder的转换</h3>string到stringbuilder：利用stringbuilder的带参构造方法<br>stringbuilder到string：利用tostring()方法</li>
 </ol>
 
       
@@ -262,6 +267,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/10/23/%E9%9B%86%E5%90%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          集合
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/10/21/%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">构造方法</div>
@@ -291,7 +305,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">值得注意的点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stringbuilder"><span class="toc-number">2.</span> <span class="toc-text">Stringbuilder</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">构造方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">成员方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String%E5%92%8CStringbuilder%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">String和Stringbuilder的转换</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

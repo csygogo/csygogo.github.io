@@ -143,6 +143,216 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java中的引用类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/java%E4%B8%AD%E7%9A%84%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">java中的引用类型</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/28/java%E4%B8%AD%E7%9A%84%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2020-10-28T13:57:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h1><p>java中除了基本数据类型均为引用数据类型，引用类型作为数据类型可以在一切可以使用类型的地方使用</p>
+<h1 id="引用类型作为方法参数和返回值"><a href="#引用类型作为方法参数和返回值" class="headerlink" title="引用类型作为方法参数和返回值"></a>引用类型作为方法参数和返回值</h1><p>引用数据类型和基本数据类型一样，都可以作为方法的参数和返回值</p>
+<h1 id="引用类型作为成员变量类型"><a href="#引用类型作为成员变量类型" class="headerlink" title="引用类型作为成员变量类型"></a>引用类型作为成员变量类型</h1><p>和基本数据类型使用方法一样</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/28/java%E4%B8%AD%E7%9A%84%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/27/%E7%BB%A7%E6%89%BF/">继承</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/27/%E7%BB%A7%E6%89%BF/" class="archive-article-date">
+  	<time datetime="2020-10-27T13:54:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<h1 id="继承的特点"><a href="#继承的特点" class="headerlink" title="继承的特点"></a>继承的特点</h1><p>子类继承父类的所有属性（成员变量）和行为（方法），但并非所有父类的属性和行为（如父类的构造器 ），注意访问权限和继承不同，共享访问不代表继承，静态的只有一份属于父类，但子类有访问权限。子类还可以定义自己的属性和行为</p>
+<ol>
+<li>单继承：一个类只能继承一个直接父类</li>
+<li>多层继承</li>
+<li>一个类可以有多个子类</li>
+<li>一个类要么默认继承Object类，要么间接继承Object类<h2 id="继承后成员变量的访问特点"><a href="#继承后成员变量的访问特点" class="headerlink" title="继承后成员变量的访问特点"></a>继承后成员变量的访问特点</h2>访问按照就近原则访问：先子类后父类<br>super代表父类引用，用于父类访问<h2 id="继承后成员方法的访问特点"><a href="#继承后成员方法的访问特点" class="headerlink" title="继承后成员方法的访问特点"></a>继承后成员方法的访问特点</h2>就近原则访问，子类优先使用自己有的方法</li>
+</ol>
+<h1 id="继承的格式"><a href="#继承的格式" class="headerlink" title="继承的格式"></a>继承的格式</h1><p>子类 extends 父类</p>
+<h1 id="继承的优势"><a href="#继承的优势" class="headerlink" title="继承的优势"></a>继承的优势</h1><p>提高代码复用性。重复代码可以放在父类中</p>
+<h1 id="方法重写的概念"><a href="#方法重写的概念" class="headerlink" title="方法重写的概念"></a>方法重写的概念</h1><p>子类继承于父类则子类得到父类的方法，但子类需要改变父类中某些方法的语法就可以重新申明一个和父类方法名称一样的方法来覆盖原方法，这种方式叫方法的重写<br>重写方法前最好加上注解：@Override</p>
+<h2 id="方法重写的要求"><a href="#方法重写的要求" class="headerlink" title="方法重写的要求"></a>方法重写的要求</h2><ol>
+<li>子类重写方法的名称和形参列表必须和父类被重写方法相同</li>
+<li>子类重写方法的返回值类型声明的范围小于等于父类</li>
+<li>子类重写方法的修饰符权限大于等于父类被重写方法的修饰符权限</li>
+<li>子类重写方法申明抛出的异常的范围小于等于父类的被重写方法</li>
+<li>父类的静态方法和私有方法无法被重写</li>
+</ol>
+<h1 id="继承后构造器的特点"><a href="#继承后构造器的特点" class="headerlink" title="继承后构造器的特点"></a>继承后构造器的特点</h1><p>子类全部构造器第一行默认一定会先访问父类的无参构造器，再执行子类自己的构造器（子类构造器第一行代码一定有个super();用于调用父类构造器）</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>创建子类对象必须用super先赋予其父类的属性和行为</p>
+<h2 id="super调用父类构造器"><a href="#super调用父类构造器" class="headerlink" title="super调用父类构造器"></a>super调用父类构造器</h2><p>super（…）可以根据参数选择调用父类的某个构造器<br>this（…）可以根据参数访问本类的其他构造器<br>以上两个语句有且只能有一个在一个构造器的第一行<br>子类构造器创建的一个对象中有两块空间：父类对象空间和子类对象空间，父类对象空间地址用super表示，子类对象空间地址用this表示</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/27/%E7%BB%A7%E6%89%BF/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/%E9%9B%86%E5%90%88/">集合</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/23/%E9%9B%86%E5%90%88/" class="archive-article-date">
+  	<time datetime="2020-10-23T08:17:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/23/%E9%9B%86%E5%90%88/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-字符串相关问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -163,11 +373,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li><p>以””方式创造字符串，字符串内容相同，则JVM只会创建一个String对象，并在<em>字符串常量池</em>（处在堆内存中）中进行维护</p>
-</li>
-<li><p>通过构造方法创建的字符串对象是在<em>堆内存</em>中进行存储</p>
-</li>
+        <h2 id="值得注意的点"><a href="#值得注意的点" class="headerlink" title="值得注意的点"></a>值得注意的点</h2><ol>
+<li>以””方式创造字符串，字符串内容相同，则JVM只会创建一个String对象，并在<em>字符串常量池</em>（处在堆内存中）中进行维护</li>
+<li>通过构造方法创建的字符串对象是在<em>堆内存</em>中进行存储</li>
+<li>字符串使用加号串联时,系统会自动创建stringbuilder对象，并利用其append方法拼接，并使用tostring方法转化为string对象</li>
+<li>使用==号进行比较时，对于基本类型比较的是数据值是否相同，对于引用类型是比较地址值是否相同。字符串是对象，想要比较内容可以使用equals方法</li>
+<li>带括号的表示是方法，不带括号表示属性</li>
+</ol>
+<h2 id="Stringbuilder"><a href="#Stringbuilder" class="headerlink" title="Stringbuilder"></a>Stringbuilder</h2><ol>
+<li>是一个可变的字符串类，可以看作一个容器</li>
+<li>可以字符串提高操作效率<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3>创建一个空白的可变字符串对象，无任何内容；创建一个根据传入参数创建对象<h3 id="成员方法"><a href="#成员方法" class="headerlink" title="成员方法"></a>成员方法</h3>append,tostring,reverse…<h3 id="String和Stringbuilder的转换"><a href="#String和Stringbuilder的转换" class="headerlink" title="String和Stringbuilder的转换"></a>String和Stringbuilder的转换</h3>string到stringbuilder：利用stringbuilder的带参构造方法<br>stringbuilder到string：利用tostring()方法</li>
 </ol>
 
       
@@ -232,19 +447,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><ol>
-<li><p>构造方法名和类名相同（大小写一致）</p>
-</li>
-<li><p>无返回值类型，void都没有</p>
-</li>
-<li><p>无具体返回值（无法由return带回具体结果）</p>
-<h2 id="使用时机"><a href="#使用时机" class="headerlink" title="使用时机"></a>使用时机</h2></li>
-<li><p>每次创建对象时执行的方法</p>
-</li>
-<li><p>无法手动调用构造方法（如:对象.方法()）</p>
-<h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p>用于给对象的属性进行初始化 </p>
-</li>
-</ol>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li>构造方法名和类名相同（大小写一致）</li>
+<li>无返回值类型，void都没有</li>
+<li>无具体返回值（无法由return带回具体结果）<h2 id="使用时机"><a href="#使用时机" class="headerlink" title="使用时机"></a>使用时机</h2></li>
+<li>每次创建对象时执行的方法</li>
+<li>无法手动调用构造方法（如:对象.方法()）<h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2>用于给对象的属性进行初始化 <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2></li>
 <li>如果一个类中没有编写任何构造方法，系统会默认提供一个无参数构造方法  </li>
 <li>手动编写构造方法，系统就不会提供默认的无参数构造方法</li>
 </ol>
@@ -340,6 +547,13 @@
 <td align="center">无默认初始化值，必须先定义，赋值再使用</td>
 </tr>
 </tbody></table>
+<h1 id="成员变量和成员方法"><a href="#成员变量和成员方法" class="headerlink" title="成员变量和成员方法"></a>成员变量和成员方法</h1><p>按照有无<em>static</em>修饰，成员变量和方法可以分为：</p>
+<h2 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h2><ol>
+<li>静态成员变量：用static修饰，属于类本身，直接用类名访问即可</li>
+<li>实例成员变量：无static修饰，属于类的每个对象，必须用类的对象访问<h2 id="成员方法"><a href="#成员方法" class="headerlink" title="成员方法"></a>成员方法</h2></li>
+<li>静态方法：用static修饰的，属于类，直接用类名调用即可</li>
+<li>实例方法：无static修饰的，属于每个对象，必须用类的对象调用</li>
+</ol>
 
       
 
